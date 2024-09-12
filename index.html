@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
     <!-- Legatura catre fisierul CSS personalizat -->
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}">
+
 </head>
 <body>
 
@@ -22,7 +23,7 @@
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
       <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="static/images/logo-rmbground.png" alt="Logo BrendaHC" width="60" height="50" class="d-inline-block align-text-top">
+            <img src="{{ url_for('static', filename='images/logo-rmbground.png') }}" alt="Logo BrendaHC" width="60" height="50" class="d-inline-block align-text-top">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -59,7 +60,7 @@
           <div class="row align-items-center">
               <!-- Coloana pentru imagine -->
               <div class="col-lg-6">
-                  <img src="static/images/about-image.jpeg" alt="Imagine despre noi" class="img-fluid rounded">
+                  <img src="{{ url_for('static', filename='images/about-image.jpeg') }}" alt="Imagine despre noi" class="img-fluid rounded">
               </div>
               <!-- Coloana pentru text -->
               <div class="col-lg-6">
@@ -80,7 +81,7 @@
             <div class="row">
                 <div class="col-md">
                     <div class="card">
-                        <img src="static/images/produse.png" class="card-img-top" alt="Produs 1">
+                        <img src="{{ url_for('static', filename='images/produse.png') }}" class="card-img-top" alt="Produs 1">
                         <div class="card-body">
                             <h5 class="card-title">Produs 1</h5>
                             <p class="card-text">Descriere scurtă a produsului.</p>
@@ -89,7 +90,7 @@
                 </div>
                 <div class="col-md">
                     <div class="card">
-                        <img src="static/images/produse.png" class="card-img-top" alt="Produs 2">
+                        <img src="{{ url_for('static', filename='images/produse.png') }}" class="card-img-top" alt="Produs 2">
                         <div class="card-body">
                             <h5 class="card-title">Produs 2</h5>
                             <p class="card-text">Descriere scurtă a produsului.</p>
@@ -98,7 +99,7 @@
                 </div>
                 <div class="col-md">
                     <div class="card">
-                        <img src="static/images/produse.png" class="card-img-top" alt="Produs 3">
+                        <img src="{{ url_for('static', filename='images/produse.png') }}" class="card-img-top" alt="Produs 3">
                         <div class="card-body">
                             <h5 class="card-title">Produs 3</h5>
                             <p class="card-text">Descriere scurtă a produsului.</p>
@@ -107,7 +108,7 @@
                 </div>
                 <div class="col-md">
                     <div class="card">
-                        <img src="static/images/produse.png" class="card-img-top" alt="Produs 3">
+                        <img src="{{ url_for('static', filename='images/produse.png') }}" class="card-img-top" alt="Produs 3">
                         <div class="card-body">
                             <h5 class="card-title">Produs 4</h5>
                             <p class="card-text">Descriere scurtă a produsului.</p>
