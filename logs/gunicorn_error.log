@@ -1,0 +1,387 @@
+[2024-09-12 21:36:41 +0300] [7190] [INFO] Starting gunicorn 23.0.0
+[2024-09-12 21:36:41 +0300] [7190] [INFO] Listening at: http://127.0.0.1:8000 (7190)
+[2024-09-12 21:36:41 +0300] [7190] [INFO] Using worker: sync
+[2024-09-12 21:36:41 +0300] [7200] [INFO] Booting worker with pid: 7200
+[2024-09-12 21:36:41 +0300] [7201] [INFO] Booting worker with pid: 7201
+[2024-09-12 21:36:41 +0300] [7202] [INFO] Booting worker with pid: 7202
+[2024-09-12 21:36:41 +0300] [7203] [INFO] Booting worker with pid: 7203
+[2024-09-12 21:55:35 +0300] [7202] [INFO] Worker exiting (pid: 7202)
+[2024-09-12 21:55:35 +0300] [7200] [INFO] Worker exiting (pid: 7200)
+[2024-09-12 21:55:35 +0300] [7201] [INFO] Worker exiting (pid: 7201)
+[2024-09-12 21:55:35 +0300] [7190] [INFO] Handling signal: term
+[2024-09-12 21:55:35 +0300] [7203] [INFO] Worker exiting (pid: 7203)
+[2024-09-12 21:55:35 +0300] [7190] [ERROR] Worker (pid:7200) was sent SIGTERM!
+[2024-09-12 21:55:35 +0300] [7190] [ERROR] Worker (pid:7201) was sent SIGTERM!
+[2024-09-12 21:55:35 +0300] [7190] [ERROR] Worker (pid:7202) was sent SIGTERM!
+[2024-09-12 21:55:35 +0300] [7190] [INFO] Shutting down: Master
+[2024-09-12 21:55:36 +0300] [7544] [INFO] Starting gunicorn 23.0.0
+[2024-09-12 21:55:36 +0300] [7544] [INFO] Listening at: http://127.0.0.1:8000 (7544)
+[2024-09-12 21:55:36 +0300] [7544] [INFO] Using worker: sync
+[2024-09-12 21:55:36 +0300] [7551] [INFO] Booting worker with pid: 7551
+[2024-09-12 21:55:36 +0300] [7552] [INFO] Booting worker with pid: 7552
+[2024-09-12 21:55:36 +0300] [7553] [INFO] Booting worker with pid: 7553
+[2024-09-12 21:55:36 +0300] [7554] [INFO] Booting worker with pid: 7554
+[2024-09-12 22:57:32 +0300] [7554] [INFO] Worker exiting (pid: 7554)
+[2024-09-12 22:57:33 +0300] [7544] [INFO] Handling signal: term
+[2024-09-13 13:15:54 +0300] [5103] [INFO] Starting gunicorn 23.0.0
+[2024-09-13 13:15:54 +0300] [5103] [INFO] Listening at: http://127.0.0.1:8000 (5103)
+[2024-09-13 13:15:54 +0300] [5103] [INFO] Using worker: sync
+[2024-09-13 13:15:54 +0300] [5109] [INFO] Booting worker with pid: 5109
+[2024-09-13 13:15:54 +0300] [5110] [INFO] Booting worker with pid: 5110
+[2024-09-13 13:15:54 +0300] [5111] [INFO] Booting worker with pid: 5111
+[2024-09-13 13:15:54 +0300] [5112] [INFO] Booting worker with pid: 5112
+[2024-09-13 14:02:41 +0300] [5112] [INFO] Worker exiting (pid: 5112)
+[2024-09-13 14:02:41 +0300] [5111] [INFO] Worker exiting (pid: 5111)
+[2024-09-13 14:02:42 +0300] [5103] [INFO] Handling signal: term
+[2024-09-13 14:02:47 +0300] [5103] [ERROR] Worker (pid:5112) was sent SIGTERM!
+[2024-09-13 14:02:47 +0300] [5103] [ERROR] Worker (pid:5111) was sent SIGTERM!
+[2024-09-13 17:20:23 +0300] [4090] [INFO] Starting gunicorn 23.0.0
+[2024-09-13 17:20:23 +0300] [4090] [INFO] Listening at: http://127.0.0.1:8000 (4090)
+[2024-09-13 17:20:23 +0300] [4090] [INFO] Using worker: sync
+[2024-09-13 17:20:23 +0300] [4096] [INFO] Booting worker with pid: 4096
+[2024-09-13 17:20:23 +0300] [4097] [INFO] Booting worker with pid: 4097
+[2024-09-13 17:20:23 +0300] [4098] [INFO] Booting worker with pid: 4098
+[2024-09-13 17:20:23 +0300] [4099] [INFO] Booting worker with pid: 4099
+[2024-09-15 17:55:50 +0300] [3659] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 17:55:50 +0300] [3659] [INFO] Listening at: http://127.0.0.1:8000 (3659)
+[2024-09-15 17:55:50 +0300] [3659] [INFO] Using worker: sync
+[2024-09-15 17:55:50 +0300] [3665] [INFO] Booting worker with pid: 3665
+[2024-09-15 17:55:50 +0300] [3665] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/mihai/brendaHC/app/__init__.py", line 16
+    	try:
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-09-15 17:55:50 +0300] [3665] [INFO] Worker exiting (pid: 3665)
+[2024-09-15 17:55:50 +0300] [3659] [ERROR] Worker (pid:3665) exited with code 3
+[2024-09-15 17:55:50 +0300] [3659] [ERROR] Shutting down: Master
+[2024-09-15 17:55:50 +0300] [3659] [ERROR] Reason: Worker failed to boot.
+[2024-09-15 17:58:16 +0300] [3824] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 17:58:16 +0300] [3824] [INFO] Listening at: http://127.0.0.1:8000 (3824)
+[2024-09-15 17:58:16 +0300] [3824] [INFO] Using worker: sync
+[2024-09-15 17:58:16 +0300] [3833] [INFO] Booting worker with pid: 3833
+[2024-09-15 17:58:16 +0300] [3833] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/mihai/brendaHC/app/__init__.py", line 16
+    	try:
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-09-15 17:58:16 +0300] [3833] [INFO] Worker exiting (pid: 3833)
+[2024-09-15 17:58:16 +0300] [3834] [INFO] Booting worker with pid: 3834
+[2024-09-15 17:58:16 +0300] [3834] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/mihai/brendaHC/app/__init__.py", line 16
+    	try:
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-09-15 17:58:16 +0300] [3834] [INFO] Worker exiting (pid: 3834)
+[2024-09-15 17:58:16 +0300] [3835] [INFO] Booting worker with pid: 3835
+[2024-09-15 17:58:16 +0300] [3835] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/mihai/brendaHC/app/__init__.py", line 16
+    	try:
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-09-15 17:58:16 +0300] [3835] [INFO] Worker exiting (pid: 3835)
+[2024-09-15 17:58:16 +0300] [3824] [ERROR] Worker (pid:3833) exited with code 3
+[2024-09-15 17:58:16 +0300] [3824] [ERROR] Worker (pid:3835) was sent SIGTERM!
+[2024-09-15 17:58:16 +0300] [3824] [ERROR] Worker (pid:3834) was sent SIGTERM!
+[2024-09-15 17:58:16 +0300] [3824] [ERROR] Shutting down: Master
+[2024-09-15 17:58:16 +0300] [3824] [ERROR] Reason: Worker failed to boot.
+[2024-09-15 18:00:52 +0300] [4405] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 18:00:52 +0300] [4405] [INFO] Listening at: http://127.0.0.1:8000 (4405)
+[2024-09-15 18:00:52 +0300] [4405] [INFO] Using worker: sync
+[2024-09-15 18:00:52 +0300] [4418] [INFO] Booting worker with pid: 4418
+[2024-09-15 18:00:52 +0300] [4418] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/mihai/brendaHC/app/__init__.py", line 16
+    	try:
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-09-15 18:00:52 +0300] [4418] [INFO] Worker exiting (pid: 4418)
+[2024-09-15 18:00:52 +0300] [4426] [INFO] Booting worker with pid: 4426
+[2024-09-15 18:00:52 +0300] [4426] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/mihai/brendaHC/app/__init__.py", line 16
+    	try:
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-09-15 18:00:52 +0300] [4426] [INFO] Worker exiting (pid: 4426)
+[2024-09-15 18:00:53 +0300] [4405] [ERROR] Worker (pid:4418) exited with code 3
+[2024-09-15 18:00:53 +0300] [4405] [ERROR] Worker (pid:4426) was sent SIGTERM!
+[2024-09-15 18:00:53 +0300] [4405] [ERROR] Shutting down: Master
+[2024-09-15 18:00:53 +0300] [4405] [ERROR] Reason: Worker failed to boot.
+[2024-09-15 18:02:31 +0300] [4535] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 18:02:31 +0300] [4535] [INFO] Listening at: http://127.0.0.1:8000 (4535)
+[2024-09-15 18:02:31 +0300] [4535] [INFO] Using worker: sync
+[2024-09-15 18:02:31 +0300] [4541] [INFO] Booting worker with pid: 4541
+[2024-09-15 18:02:31 +0300] [4541] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/mihai/brendaHC/app/__init__.py", line 16
+    	try:
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-09-15 18:02:31 +0300] [4541] [INFO] Worker exiting (pid: 4541)
+[2024-09-15 18:02:31 +0300] [4535] [ERROR] Worker (pid:4541) exited with code 3
+[2024-09-15 18:02:31 +0300] [4535] [ERROR] Shutting down: Master
+[2024-09-15 18:02:31 +0300] [4535] [ERROR] Reason: Worker failed to boot.
+[2024-09-15 18:02:54 +0300] [4588] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 18:02:54 +0300] [4588] [INFO] Listening at: http://127.0.0.1:8000 (4588)
+[2024-09-15 18:02:54 +0300] [4588] [INFO] Using worker: sync
+[2024-09-15 18:02:54 +0300] [4599] [INFO] Booting worker with pid: 4599
+[2024-09-15 18:02:54 +0300] [4599] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/arbiter.py", line 608, in spawn_worker
+    worker.init_process()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 135, in init_process
+    self.load_wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/workers/base.py", line 147, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/base.py", line 66, in wsgi
+    self.callable = self.load()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 57, in load
+    return self.load_wsgiapp()
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/app/wsgiapp.py", line 47, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/mihai/brendaHC/venv/lib/python3.9/site-packages/gunicorn/util.py", line 370, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib64/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/home/mihai/brendaHC/app/__init__.py", line 16
+    	try:
+    ^
+TabError: inconsistent use of tabs and spaces in indentation
+[2024-09-15 18:02:54 +0300] [4599] [INFO] Worker exiting (pid: 4599)
+[2024-09-15 18:02:54 +0300] [4588] [ERROR] Worker (pid:4599) exited with code 3
+[2024-09-15 18:02:54 +0300] [4588] [ERROR] Shutting down: Master
+[2024-09-15 18:02:54 +0300] [4588] [ERROR] Reason: Worker failed to boot.
+[2024-09-15 20:01:39 +0300] [5162] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 20:01:39 +0300] [5162] [INFO] Listening at: http://127.0.0.1:8000 (5162)
+[2024-09-15 20:01:39 +0300] [5162] [INFO] Using worker: sync
+[2024-09-15 20:01:39 +0300] [5168] [INFO] Booting worker with pid: 5168
+[2024-09-15 20:01:40 +0300] [5169] [INFO] Booting worker with pid: 5169
+[2024-09-15 20:01:40 +0300] [5170] [INFO] Booting worker with pid: 5170
+[2024-09-15 20:01:40 +0300] [5171] [INFO] Booting worker with pid: 5171
+[2024-09-15 20:01:40 +0300] [5171] [INFO] Worker exiting (pid: 5171)
+[2024-09-15 20:01:40 +0300] [5169] [INFO] Worker exiting (pid: 5169)
+[2024-09-15 20:01:40 +0300] [5168] [INFO] Worker exiting (pid: 5168)
+[2024-09-15 20:01:40 +0300] [5170] [INFO] Worker exiting (pid: 5170)
+[2024-09-15 20:01:40 +0300] [5162] [ERROR] Worker (pid:5171) exited with code 4
+[2024-09-15 20:01:40 +0300] [5162] [ERROR] Worker (pid:5169) was sent SIGTERM!
+[2024-09-15 20:01:40 +0300] [5162] [ERROR] Worker (pid:5170) was sent SIGTERM!
+[2024-09-15 20:01:40 +0300] [5162] [ERROR] Worker (pid:5168) was sent SIGTERM!
+[2024-09-15 20:01:40 +0300] [5162] [ERROR] Shutting down: Master
+[2024-09-15 20:01:40 +0300] [5162] [ERROR] Reason: App failed to load.
+[2024-09-15 20:10:13 +0300] [5367] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 20:10:13 +0300] [5367] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:10:13 +0300] [5367] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:10:14 +0300] [5367] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:10:14 +0300] [5367] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:10:15 +0300] [5367] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:10:15 +0300] [5367] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:10:16 +0300] [5367] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:10:16 +0300] [5367] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:10:17 +0300] [5367] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:10:17 +0300] [5367] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:10:18 +0300] [5367] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-09-15 20:11:44 +0300] [5419] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 20:11:44 +0300] [5419] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:11:44 +0300] [5419] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:11:45 +0300] [5419] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:11:45 +0300] [5419] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:11:46 +0300] [5419] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:11:46 +0300] [5419] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:11:47 +0300] [5419] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:11:47 +0300] [5419] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:11:48 +0300] [5419] [ERROR] Connection in use: ('127.0.0.1', 8000)
+[2024-09-15 20:11:48 +0300] [5419] [ERROR] connection to ('127.0.0.1', 8000) failed: [Errno 98] Address already in use
+[2024-09-15 20:11:49 +0300] [5419] [ERROR] Can't connect to ('127.0.0.1', 8000)
+[2024-09-15 20:19:06 +0300] [5656] [INFO] Starting gunicorn 23.0.0
+[2024-09-15 20:19:06 +0300] [5656] [INFO] Listening at: http://127.0.0.1:8000 (5656)
+[2024-09-15 20:19:06 +0300] [5656] [INFO] Using worker: sync
+[2024-09-15 20:19:06 +0300] [5662] [INFO] Booting worker with pid: 5662
+[2024-09-15 20:19:06 +0300] [5663] [INFO] Booting worker with pid: 5663
+[2024-09-15 20:19:06 +0300] [5664] [INFO] Booting worker with pid: 5664
+[2024-09-15 20:19:06 +0300] [5665] [INFO] Booting worker with pid: 5665
+[2024-09-15 20:19:12 +0300] [5656] [INFO] Handling signal: term
+[2024-09-15 20:19:12 +0300] [5662] [INFO] Worker exiting (pid: 5662)
+[2024-09-15 20:19:12 +0300] [5664] [INFO] Worker exiting (pid: 5664)
+[2024-09-15 20:19:12 +0300] [5663] [INFO] Worker exiting (pid: 5663)
+[2024-09-15 20:19:12 +0300] [5665] [INFO] Worker exiting (pid: 5665)
+[2024-09-15 20:19:12 +0300] [5656] [INFO] Shutting down: Master

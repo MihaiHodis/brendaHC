@@ -79,45 +79,21 @@
         <div class="container">
             <h2 class="text-center">Produsele Noastre</h2>
             <div class="row">
+                {% for produs in produse %}
                 <div class="col-md">
                     <div class="card">
-                        <img src="{{ url_for('static', filename='images/produse.png') }}" class="card-img-top" alt="Produs 1">
+                        <img src="{{ url_for('static', filename=produs['imagine']) }}" class="card-img-top" alt="{{ produs['nume'] }}">
                         <div class="card-body">
-                            <h5 class="card-title">Produs 1</h5>
-                            <p class="card-text">Descriere scurtă a produsului.</p>
+                            <h5 class="card-title">{{ produs['nume'] }}</h5>
+                            <p class="card-text">Preț: {{ produs['pret'] }} lei</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md">
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/produse.png') }}" class="card-img-top" alt="Produs 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Produs 2</h5>
-                            <p class="card-text">Descriere scurtă a produsului.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/produse.png') }}" class="card-img-top" alt="Produs 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Produs 3</h5>
-                            <p class="card-text">Descriere scurtă a produsului.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card">
-                        <img src="{{ url_for('static', filename='images/produse.png') }}" class="card-img-top" alt="Produs 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Produs 4</h5>
-                            <p class="card-text">Descriere scurtă a produsului.</p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
+    
 
 
         <!-- Sectiunea Contact -->
