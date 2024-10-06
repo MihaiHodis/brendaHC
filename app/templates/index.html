@@ -92,8 +92,8 @@
                                 <h6>Recenzii:</h6>
                                 {% if produs['recenzii'] %}
                                     {% for recenzie in produs['recenzii'] %}
-                                    <p><strong>{{ recenzie['utilizator'] }}</strong> a dat {{ recenzie['evaluare'] }} stele</p>
-                                    <p>{{ recenzie['comentariu'] }}</p>
+                                    <p><strong>{{ recenzie[2] }}</strong> a dat {{ recenzie[0] }} stele</p>
+                                    <p>{{ recenzie[1] }}</p>
                                     <hr>
                                     {% endfor %}
                                 {% else %}

@@ -17,7 +17,7 @@ def home():
             # Pentru fiecare produs, obținem recenziile sale
             cursor.execute('SELECT evaluare, comentariu, utilizator FROM recenzii WHERE produs_id = %s', (produs[0],))
             recenzii = cursor.fetchall()
-            
+            print(recenzii)            
             # Adăugăm produsul și recenziile sale într-un dicționar
             produse_recenzii.append({
                 'id': produs[0],
