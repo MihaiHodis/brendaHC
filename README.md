@@ -11,7 +11,6 @@ Welcome to **Brenda Home Cooking** - an online bakery and home-cooking store whe
 5. [API Endpoints](#api-endpoints)
 6. [Folder Structure](#folder-structure)
 7. [Contributing](#contributing)
-8. [License](#license)
 
 ## Project Overview
 
@@ -115,11 +114,6 @@ Example Response:
 
 Contributions are welcome! Please fork this repository and open a pull request with your changes. Make sure to follow the style guide and thoroughly test your additions.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
 
 If you encounter any issues or have suggestions, feel free to create an issue on the GitHub repository or contact me directly.
 
