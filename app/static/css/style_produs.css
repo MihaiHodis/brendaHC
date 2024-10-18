@@ -1,0 +1,96 @@
+html {
+    scroll-padding-top: 50px; /* Înălțimea navbar-ului */
+}
+
+body {
+    font-family: "Nerko One", cursive;
+}
+
+header {
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    color: gold;
+}
+
+footer {
+    background-color: #d3ad05; /* Fundal întunecat pentru footer */
+    color: white;
+}
+
+        /* Navbar styling */
+.navbar {
+    padding: 0.5rem 0;  /* Adjust the padding to make it look balanced */
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.navbar-brand {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+    color: #555;  /* Change to a softer color on hover */
+}
+
+.logo-centered {
+    width: 150px;  /* Adjust logo size */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-centered:hover {
+    transform: scale(1.1);  /* Slight zoom effect */
+}
+
+/* Home link */
+.home-link {
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    margin-left: 100px !important;
+}
+
+.home-link:hover {
+    color: #555;
+}
+
+
+            /* Stilizare sectiune about */
+
+#about img {
+    max-width: 100%;
+    height: auto; /* Păstrează proporțiile corecte ale imaginii */
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+        /* Container styling to keep the image centered and limit its size */
+.card-image-container {
+    max-width: 500px;  /* Adjust to your desired width */
+    margin: 0 auto;    /* Center the container horizontally */
+    padding: 20px;     /* Add some padding for better spacing */
+}
+
+/* Image styling */
+.product-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image is cropped nicely if necessary */
+    border-radius: 10px; /* Add rounded corners if you want */
+}

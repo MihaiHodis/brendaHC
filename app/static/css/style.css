@@ -19,15 +19,29 @@ footer {
     color: white;
 }
 
-/* Stilizare nav-bar */
-
-.navbar.sticky-top {
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.95); /* Fundal semitransparent */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adaugă o umbră subtilă */
+        /* Navbar styling with centered logo */
+.navbar {
+    padding: 1rem 0;
+    background-color: #f8f9fa;  /* Light background for visibility */
+    border-bottom: 1px solid #eaeaea;
 }
 
-/* Stilizare sectiune about */
+.logo-centered {
+    width: 170px;  /* Adjust size as needed */
+    height: auto;  /* Keeps the aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-centered:hover {
+    transform: scale(1.1);  /* Slight zoom-in effect on hover */
+}
+
+ul li {
+    font-size: 1.5rem;
+}
+
+
+            /* Stilizare sectiune about */
 
 #about img {
     max-width: 100%;
@@ -35,30 +49,150 @@ footer {
 }
 
 #about h2 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     margin-bottom: 20px;
     text-align: center;
 }
 
 #about p {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     line-height: 1.8;
     text-align: center;
 }
 
-/* Stilizare formular */
+
+            /* Stilizare categories */
+
+/* Stiluri pentru cardurile categorii */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dimensiunea și aspectul imaginilor */
+.card-image-container {
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image-container {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.card-image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Stil pentru titlul cardurilor */
+.card-title {
+    color: gold;
+    font-family: 'Nerko One', cursive;
+    font-size: 1.6rem;
+}
+
+/* Buton stilizat */
+.btn-outline-primary {
+    background-color: gold;
+    border-color: gold;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: none;
+    outline: none;
+    font-size: 1.25rem;
+}
+
+.btn-outline-primary:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-outline-primary:hover {
+    background-color: #d3ad05;
+    color: #fff;
+}
+
+/* Elimină conturul albastru pentru focus și hover pentru butoane și linkuri */
+button:focus, 
+button:active,
+button:hover,
+a:focus,
+a:active,
+a:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Elimină conturul albastru pentru butoane */
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: #d3ad05; /* Stilul pe hover */
+    color: #fff; /* Culoare pe hover */
+}
+
+/* Dacă există alte butoane cu un stil similar, aplică-le și acestora */
+button, a.btn {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+
+
+
+            /* Stilizare formular */
 
 #contact input, 
 #contact textarea {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     padding: 10px;
 }
 
 #contact button {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     padding: 10px 20px;
     margin-bottom: 20px;
     background-color: transparent;
     color: black;
     border: none;
+}
+
+            /* Stilizare sectiune recenzii */
+
+label {
+    font-size: 1.4rem;
+}
+
+/* Stil pentru secțiunea de recenzii */
+.recenzie-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stelele pentru evaluare */
+.star-rating {
+    color: #ffc107;
+    font-size: 20px;
+}
+
+/* Comentariul */
+.comentariu {
+    font-style: italic;
+    color: #495057;
+    margin-bottom: 10px;
 }
