@@ -19,104 +19,93 @@ footer {
     color: white;
 }
 
-        /* Navbar styling */
+
+         /* Navbar START */
+
 .navbar {
-    padding: 0.5rem 0;  /* Adjust the padding to make it look balanced */
-    background-color: #f8f9fa;
+    background-color:rgba(237, 229, 229, 0.807);
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 16px;
     border-bottom: 1px solid #eaeaea;
+    padding: 0.5rem;
+    width: 80%;
 }
 
 .navbar-brand {
+    transition: 0.3 color;
     color: #000;
     font-weight: bold;
     text-decoration: none;
 }
 
-.navbar-brand:hover {
-    color: #555;  /* Change to a softer color on hover */
-}
-
-.logo-centered {
-    width: 150px;  /* Adjust logo size */
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.logo-centered:hover {
-    transform: scale(1.1);  /* Slight zoom effect */
-}
-
-/* Home link */
-.home-link {
-    font-size: 1.5rem;
-    color: #000;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    margin-left: 100px !important;
-}
-
-.home-link:hover {
-    color: #555;
-}
-
-/* Styling for dropdown button */
-
-.dropdown.position-absolute.end-0 {
-    margin-right: 100px !important; /* Ajustează valoarea pentru a muta dropdown-ul spre stânga */
-}
-
-.simple-dropdown-btn {
-    background-color: transparent;  /* Remove background color */
-    color: #000;  /* Set text color to black */
-    border: none;  /* Remove any border */
-    font-weight: 500;
-    transition: color 0.2s ease;
-    font-size: 1.5rem;
-}
-
-.simple-dropdown-btn:hover {
-    color: #555;  /* Change color on hover */
-}
-
-/* Styling for dropdown items */
-.dropdown-menu {
-    min-width: 200px;  /* Adjust dropdown width as necessary */
-}
-
-.dropdown-item {
-    color: #000;  /* Set text color */
+.navbar-toggler {
+    border: none;
     font-size: 1.25rem;
 }
 
-.dropdown-item:hover {
-    background-color: #f0f0f0;  /* Light grey hover effect */
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-item {
+    font-size: 1.6rem;
+}
+
+.nav-link {
+    color: rgba(0, 0, 0, 0.512);
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
     color: #000;
 }
 
-
-
-            /* Stilizare sectiune about */
-
-#about img {
-    max-width: 100%;
-    height: auto; /* Păstrează proporțiile corecte ale imaginii */
+/* Stiluri pentru offcanvas */
+.offcanvas-header {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+  
+  .offcanvas-title {
+    font-family: 'Nerko One', cursive;
+    font-size: 1.5rem;
+    color: #000;
 }
 
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
+.dropdown-item {
+    font-size: 1.2rem;
 }
 
-#about p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: center;
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: black;
+        visibility: hidden;
+        transition: 0.3 ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
 }
 
 
-            /* Stilizare categories */
+
+        /* Navbar END */
+
+
+        /* Stilizare sectiune categorie */
 
 /* Stiluri pentru cardurile categorii */
 .card {
@@ -146,10 +135,11 @@ footer {
 }
 
 /* Stil pentru titlul cardurilor */
-.card-title {
+.card-title a {
     color: gold;
     font-family: 'Nerko One', cursive;
     font-size: 1.5rem;
+    text-decoration: none;
 }
 
-
+        /* Stilizare sectiune categorie END */

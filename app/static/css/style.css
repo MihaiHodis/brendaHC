@@ -1,198 +1,238 @@
 html {
-    scroll-padding-top: 50px; /* Înălțimea navbar-ului */
+  scroll-padding-top: 50px; /* Înălțimea navbar-ului */
 }
 
 body {
-    font-family: "Nerko One", cursive;
+  font-family: "Nerko One", cursive;
 }
 
 header {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
-h1, h2 {
-    color: gold;
+h1,
+h2 {
+  color: gold;
 }
 
 footer {
-    background-color: #d3ad05; /* Fundal întunecat pentru footer */
-    color: white;
+  background-color: #d3ad05; /* Fundal întunecat pentru footer */
+  color: white;
 }
 
-        /* Navbar styling with centered logo */
+/* Navbar START */
+
 .navbar {
-    padding: 1rem 0;
-    background-color: #f8f9fa;  /* Light background for visibility */
-    border-bottom: 1px solid #eaeaea;
+  background-color: rgba(237, 229, 229, 0.807);
+  height: 100px;
+  margin: 20px auto;
+  border-radius: 16px;
+  border-bottom: 1px solid #eaeaea;
+  padding: 0.5rem;
+  width: 80%;
 }
 
-.logo-centered {
-    width: 170px;  /* Adjust size as needed */
-    height: auto;  /* Keeps the aspect ratio */
-    transition: transform 0.3s ease-in-out;
+.navbar-brand {
+  transition: 0.3 color;
 }
 
-.logo-centered:hover {
-    transform: scale(1.1);  /* Slight zoom-in effect on hover */
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
 }
 
-ul li {
-    font-size: 1.5rem;
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
 }
 
+.nav-item {
+  font-size: 1.6rem;
+}
 
-            /* Stilizare sectiune about */
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: black;
+    visibility: hidden;
+    transition: 0.3 ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+/* Navbar END */
+
+/* Stilizare sectiune about */
 
 #about img {
-    max-width: 100%;
-    height: auto; /* Păstrează proporțiile corecte ale imaginii */
+  max-width: 100%;
+  height: auto; /* Păstrează proporțiile corecte ale imaginii */
 }
 
 #about h2 {
-    font-size: 2.7rem;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 #about p {
-    font-size: 1.4rem;
-    line-height: 1.8;
-    text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: center;
 }
 
-
-            /* Stilizare categories */
+/* Stilizare categories */
 
 /* Stiluri pentru cardurile categorii */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Dimensiunea și aspectul imaginilor */
 .card-image-container {
-    height: 250px;
-    overflow: hidden;
+  height: 250px;
+  overflow: hidden;
 }
 
 .card-image-container {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.3s ease;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
 }
 
 .card-image-container img:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Stil pentru titlul cardurilor */
 .card-title {
-    color: gold;
-    font-family: 'Nerko One', cursive;
-    font-size: 1.6rem;
+  color: gold;
+  font-family: "Nerko One", cursive;
+  font-size: 1.6rem;
 }
 
 /* Buton stilizat */
 .btn-outline-primary {
-    background-color: gold;
-    border-color: gold;
-    color: rgb(0, 0, 0);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    box-shadow: none;
-    outline: none;
-    font-size: 1.25rem;
+  background-color: gold;
+  border-color: gold;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: none;
+  outline: none;
+  font-size: 1.25rem;
 }
 
 .btn-outline-primary:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .btn-outline-primary:hover {
-    background-color: #d3ad05;
-    color: #fff;
+  background-color: #d3ad05;
+  color: #fff;
 }
 
 /* Elimină conturul albastru pentru focus și hover pentru butoane și linkuri */
-button:focus, 
+button:focus,
 button:active,
 button:hover,
 a:focus,
 a:active,
 a:hover {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /* Elimină conturul albastru pentru butoane */
 .btn-outline-primary:focus,
 .btn-outline-primary:active,
 .btn-outline-primary:hover {
-    outline: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    background-color: #d3ad05; /* Stilul pe hover */
-    color: #fff; /* Culoare pe hover */
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: #d3ad05; /* Stilul pe hover */
+  color: #fff; /* Culoare pe hover */
 }
 
 /* Dacă există alte butoane cu un stil similar, aplică-le și acestora */
-button, a.btn {
-    outline: none !important;
-    box-shadow: none !important;
+button,
+a.btn {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
+/* Stilizare formular */
 
-
-
-
-            /* Stilizare formular */
-
-#contact input, 
+#contact input,
 #contact textarea {
-    font-size: 1.4rem;
-    padding: 10px;
+  font-size: 1.4rem;
+  padding: 10px;
 }
 
 #contact button {
-    font-size: 1.4rem;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    background-color: transparent;
-    color: black;
-    border: none;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  color: black;
+  border: none;
 }
 
-            /* Stilizare sectiune recenzii */
+/* Stilizare sectiune recenzii */
 
 label {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 /* Stil pentru secțiunea de recenzii */
 .recenzie-card {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Stelele pentru evaluare */
 .star-rating {
-    color: #ffc107;
-    font-size: 20px;
+  color: #ffc107;
+  font-size: 20px;
 }
 
 /* Comentariul */
 .comentariu {
-    font-style: italic;
-    color: #495057;
-    margin-bottom: 10px;
+  font-style: italic;
+  color: #495057;
+  margin-bottom: 10px;
 }
