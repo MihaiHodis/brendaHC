@@ -19,27 +19,65 @@ footer {
     color: white;
 }
 
-        /* Navbar styling with centered logo */
+        /* Navbar START */
+
 .navbar {
-    padding: 1rem 0;
-    background-color: #f8f9fa;  /* Light background for visibility */
-    border-bottom: 1px solid #eaeaea;
+    background-color: rgb(235, 235, 235);
+    height: 100px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
 }
 
-.logo-centered {
-    width: 170px;  /* Adjust size as needed */
-    height: auto;  /* Keeps the aspect ratio */
-    transition: transform 0.3s ease-in-out;
+.navbar-brand {
+    transition: 0.3 color;
 }
 
-.logo-centered:hover {
-    transform: scale(1.1);  /* Slight zoom-in effect on hover */
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
 }
 
-ul li {
-    font-size: 1.5rem;
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
 }
 
+.nav-item {
+    font-size: 1.6rem;
+}
+
+.nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #000;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #d3ad05;
+        visibility: hidden;
+        transition: 0.3 ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+        /* Navbar END */
 
             /* Stilizare sectiune about */
 
