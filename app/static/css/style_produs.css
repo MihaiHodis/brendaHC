@@ -1,96 +1,123 @@
 html {
-    scroll-padding-top: 50px; /* Înălțimea navbar-ului */
+  scroll-padding-top: 50px; /* Înălțimea navbar-ului */
 }
 
 body {
-    font-family: "Nerko One", cursive;
+  font-family: "Nerko One", cursive;
 }
 
 header {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
-h1, h2 {
-    color: gold;
+h1,
+h2 {
+  color: gold;
 }
 
 footer {
-    background-color: #d3ad05; /* Fundal întunecat pentru footer */
-    color: white;
+  background-color: #d3ad05; /* Fundal întunecat pentru footer */
+  color: white;
 }
 
-        /* Navbar styling */
+/* Navbar START */
+
 .navbar {
-    padding: 0.5rem 0;  /* Adjust the padding to make it look balanced */
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #eaeaea;
+  background-color: rgba(237, 229, 229, 0.807);
+  height: 100px;
+  margin: 20px auto;
+  border-radius: 16px;
+  border-bottom: 1px solid #eaeaea;
+  padding: 0.5rem;
+  width: 80%;
 }
 
 .navbar-brand {
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
+  transition: 0.3 color;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.navbar-brand:hover {
-    color: #555;  /* Change to a softer color on hover */
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
 }
 
-.logo-centered {
-    width: 150px;  /* Adjust logo size */
-    height: auto;
-    transition: transform 0.3s ease-in-out;
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
 }
 
-.logo-centered:hover {
-    transform: scale(1.1);  /* Slight zoom effect */
+.nav-item {
+  font-size: 1.6rem;
 }
 
-/* Home link */
-.home-link {
-    font-size: 1.5rem;
-    color: #000;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease;
-    margin-left: 100px !important;
+.nav-link {
+  color: rgba(0, 0, 0, 0.512);
+  font-weight: 500;
+  position: relative;
 }
 
-.home-link:hover {
-    color: #555;
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
 }
 
-
-            /* Stilizare sectiune about */
-
-#about img {
-    max-width: 100%;
-    height: auto; /* Păstrează proporțiile corecte ale imaginii */
+/* Stiluri pentru offcanvas */
+.offcanvas-header {
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
+.offcanvas-title {
+  font-family: "Nerko One", cursive;
+  font-size: 1.5rem;
+  color: #000;
 }
 
-#about p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: center;
+.dropdown-item {
+  font-size: 1.2rem;
 }
 
-        /* Container styling to keep the image centered and limit its size */
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: black;
+    visibility: hidden;
+    transition: 0.3 ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+/* Navbar END */
+
+
+
+/* Container styling to keep the image centered and limit its size */
 .card-image-container {
-    max-width: 500px;  /* Adjust to your desired width */
-    margin: 0 auto;    /* Center the container horizontally */
-    padding: 20px;     /* Add some padding for better spacing */
+  max-width: 500px; /* Adjust to your desired width */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some padding for better spacing */
 }
 
 /* Image styling */
 .product-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover; /* Ensures the image is cropped nicely if necessary */
-    border-radius: 10px; /* Add rounded corners if you want */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image is cropped nicely if necessary */
+  border-radius: 10px; /* Add rounded corners if you want */
 }
