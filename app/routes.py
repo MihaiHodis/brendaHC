@@ -65,17 +65,36 @@ def afisare_pagina_produs(produs_id):
         # Selecteaza produsul de interes din baza de date
         cursor.execute('SELECT id, nume, imagine, pret, descriere FROM produse WHERE id = %s', (produs_id,))
         produs = cursor.fetchone()
-        if produs:
-            produs_data = {'id': produs[0], 'nume': produs[1], 'imagine': produs[2], 'pret': produs[3], 'descriere': produs[4]}
-        else:
-            produs_data = None
 
-        if not produs_data:
-            return "Produsul nu a fost găsit", 404
+        # Daca produsul nu a fost gasit, afiseaza o eroare
+        if not produs:
+            return "Produsul cautat nu a fost gasit", 404
+        
+        # Selecteaza review-ul pentru produsul corespunzator conform id-ului
+        cursor.execute('SELECT evaluare, comentariu, utilizator, data FROM recenzii WHERE produs_id = %s', (produs_id,))
+        recenzii = cursor.fetchall()
+
+        # Se pregateste un dictionare care va trimite datele cerute catre template
+    
+        produs_data = {
+            'id': produs[0],
+            'nume': produs[1],
+            'imagine': produs[2],
+            'pret': produs[3],
+            'descriere': produs[4],
+            'recenzii': [{'evaluare': rec[0], 'comentariu': rec[1], 'utilizator': rec[2], 'data': rec[3]} for rec in recenzii]
+        }
+
+        # Se face media rating-urile oferite produselor
+        if recenzii:
+            total_evaluare = sum([rec[0] for rec in recenzii])
+            produs_data['rating_mediu'] = round(total_evaluare / len(recenzii), 1)
+        else:
+            produs_data['rating_mediu'] = None
 
     except Exception as e:
         print(f"Database error: {e}")
-        return "A intervenit o eroare la baza de date", 500
+        produs_data = None
 
     finally:
         cursor.close()
@@ -106,24 +125,4 @@ def adauga_recenzie():
     connection.close()
 
     # Redirecționăm înapoi la pagina principală
-    return redirect('/')
-
-"""
-        # Creăm un dicționar pentru a stoca produsele și recenziile asociate
-        produse_recenzii = []
-
-        for produs in produse:
-            # Pentru fiecare produs, obținem recenziile sale
-            cursor.execute('SELECT evaluare, comentariu, utilizator FROM recenzii WHERE produs_id = %s', (produs[0],))
-            recenzii = cursor.fetchall()
-            print(recenzii)            
-            # Adăugăm produsul și recenziile sale într-un dicționar
-            produse_recenzii.append({
-                'id': produs[0],
-                'nume': produs[1],
-                'pret': produs[2],
-                'imagine': produs[3],
-                'recenzii': recenzii
-            }) """
-
-
+    return redirect(f'/produse/{produs_id}')

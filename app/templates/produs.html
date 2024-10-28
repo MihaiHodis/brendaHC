@@ -15,26 +15,28 @@
     <!-- Legatura catre fisierul CSS personalizat -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_produs.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_produs_main.css') }}">
+    <!-- Pt stele -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar with logo centered, "Home" on the left, and dropdown on the right -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <div class="container d-flex justify-content-center align-items-center position-relative">
-
-            <!-- Left side: Home link -->
-            <a class="navbar-brand position-absolute start-0 ms-2 home-link" href="{{ url_for('home') }}">
-                Home
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="{{ url_for('static', filename='images/logo-rmbground.png') }}" alt="Logo BrendaHC" width="60" height="50" class="d-inline-block align-text-top">
             </a>
-
-            <!-- Center: Logo -->
-            <a class="navbar-brand d-flex justify-content-center" href="#">
-                <img src="{{ url_for('static', filename='images/logo-rmbground.png') }}" alt="Logo BrendaHC" width="150" height="125" class="logo-centered">
-            </a>
-
-            <a class="navbar-brand position-absolute end-0 ms-2 home-link" href="{{ url_for('home') }}">Alte produse</a>
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link home-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </nav>
+      </nav>
 
 
 
@@ -59,7 +61,28 @@
             <div class="col-md-7">
                 <h3>{{ produs['nume'] }}</h3>
                 <p class="price">{{ produs['pret'] }} lei</p>
-    
+                
+                <!-- Media Rating-urilor -->
+                <div class="rating mt-3">
+                    <span>Rating:</span>
+                    <div class="stars">
+                        {% if produs['rating_mediu'] %}
+                            {% set rating = produs['rating_mediu'] %}
+                            {% for i in range(1, 6) %}
+                                {% if i <= rating %}
+                                    <i class="fas fa-star" style="color: gold;"></i>
+                                {% elif i - rating < 1 %}
+                                    <i class="fas fa-star-half-alt" style="color: gold;"></i>
+                                {% else %}
+                                    <i class="far fa-star" style="color: gold;"></i>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                            <p>Nu există încă evaluări pentru acest produs.</p>
+                        {% endif %}
+                    </div>
+                </div>
+
                 <!-- Quantity and Add to Cart -->
                 <div class="product-actions mt-4">
                     <div class="d-flex align-items-center">
@@ -74,6 +97,53 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+
+        <br>
+
+
+        <!-- Sectiunea afisare review -->
+        <div class="reviews mt-4">
+            <h5>Recenzii</h5>
+            {% if produs['recenzii'] %}
+                {% for recenzie in produs['recenzii'] %}
+                    <div class="review">
+                        <p><strong>{{ recenzie['utilizator'] }}</strong> a dat {{ recenzie['evaluare'] }} stele</p>
+                        <p>{{ recenzie['comentariu'] }}</p>
+                        <hr>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Nu există recenzii pentru acest produs.</p>
+            {% endif %}
+        </div>
+
+        <!-- Sectiune de adaugat review -->
+        <div class="add-review mt-4">
+            <h5>Adaugă o recenzie</h5>
+            <form action="/recenzie" method="POST">
+                <input type="hidden" name="produs_id" value="{{ produs['id'] }}">
+                <div class="mb-3">
+                    <label for="evaluare">Evaluare:</label>
+                    <select id="evaluare" name="evaluare" class="form-control">
+                        <option value="5">5 Stele</option>
+                        <option value="4">4 Stele</option>
+                        <option value="3">3 Stele</option>
+                        <option value="2">2 Stele</option>
+                        <option value="1">1 Stea</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="comentariu">Comentariu:</label>
+                    <textarea id="comentariu" name="comentariu" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="utilizator">Nume:</label>
+                    <input type="text" id="utilizator" name="utilizator" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-dark btn-primary">Trimite recenzia</button>
+            </form>
         </div>
     </div>
     
