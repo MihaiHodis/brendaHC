@@ -1,22 +1,44 @@
+/* Color Legend */
+:root {
+  --primary-color: #d4a017; /* Golden - Main brand color */
+  --text-color: #d49e17df;
+  --secondary-color: #f8f9fa; /* Light background */
+  --accent-color: #555; /* Accent for hover effects */
+  --background-color: #ffffff; /* Default page background */
+  --border-color: #eaeaea; /* Light grey for borders */
+  --highlight-color: #ffcc00; /* Star rating highlight */
+  --dark-accent-color: #333; /* Darker accent color */
+}
+
 html {
   scroll-padding-top: 50px; /* Înălțimea navbar-ului */
 }
 
 body {
   font-family: "Nerko One", cursive;
-}
-
-header {
-  background-color: #f8f9fa;
+  background-image: url(/static/images/page-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 h1,
 h2 {
-  color: gold;
+  color: var(--primary-color);
+}
+
+.detalii-produs p {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.detalii-produs .price {
+  font-size: 2rem;
 }
 
 footer {
-  background-color: #d3ad05; /* Fundal întunecat pentru footer */
+  background-color: var(--primary-color); /* Fundal întunecat pentru footer */
   color: white;
 }
 
@@ -121,3 +143,120 @@ footer {
   object-fit: cover; /* Ensures the image is cropped nicely if necessary */
   border-radius: 10px; /* Add rounded corners if you want */
 }
+
+
+/* Sectiunea afisare Review START */
+
+.titlu-rec {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.carousel-inner {
+  display: flex;
+  justify-content: center;  /* Alinează cardurile la centru */
+}
+
+.carousel-item {
+  max-width: 600px; /* Limitează lățimea maximă a cardului de recenzie */
+  margin: 0 auto;
+  transition: opacity 1.5s ease-in-out; 
+  font-size: 1.1rem;
+}
+
+.card {
+  background-color: rgba(237, 229, 229, 0.807); /* Culoare de fundal pentru a evidenția recenziile */
+  border-radius: 10px; /* Colțuri rotunjite pentru card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow pentru un efect de profunzime */
+  padding: 10px; /* Spațiu interior pentru card */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: var(--primary-color);
+}
+
+/* Sectiunea afisare Review END */
+
+
+    /* Sectiunea de adaugat review START */
+
+/* Pentru stele */
+.star-rating {
+  direction: rtl;  /* Right-to-left, so the first star (5) is visually first */
+  display: flex;
+  justify-content: center;
+}
+
+.star-rating i {
+  margin-left: 0.5rem;
+}
+
+.star-rating input[type="radio"] {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 2rem;  /* Increase size for better visibility */
+  color: #ccc;  /* Default star color */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+    color: var(--highlight-color);  /* Golden color for selected stars */
+}
+
+/* Container */
+.add-review {
+  background-color: rgba(255, 255, 255, 0.9);  /* Light semi-transparent background for contrast */
+  border-radius: 15px;  /* Rounded corners for the container */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  padding: 30px;  /* Padding for inner spacing */
+  max-width: 600px;  /* Limit the form width */
+  margin: 20px auto;  /* Center horizontally with margin */
+}
+
+.add-review h5 {
+  color: var(--primary-color);  /* Gold color to match your site style */
+  font-family: 'Nerko One', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.review-form label {
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.review-form .form-control {
+  border-radius: 10px;  /* Rounded input fields */
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.review-form .form-control:focus {
+  border-color: #d3ad05;  /* Change border color to gold */
+  box-shadow: 0 0 5px rgba(211, 173, 5, 0.5);  /* Highlight input field */
+}
+
+.btn-submit-review {
+  background-color: var(--primary-color);  /* Gold background for the button */
+  color: #fff;  /* White text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;  /* Make the button rounded */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 0 auto;  /* Center the button */
+}
+
+.btn-submit-review:hover {
+  background-color: #c09703;  /* Darken the gold a bit */
+  transform: scale(1.05);  /* Slight scale-up effect */
+}
+
+    /* Sectiunea de adaugat review END */
