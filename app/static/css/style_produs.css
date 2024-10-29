@@ -4,10 +4,11 @@ html {
 
 body {
   font-family: "Nerko One", cursive;
-}
-
-header {
-  background-color: #f8f9fa;
+  background-image: url(/static/images/page-background.png);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 h1,
@@ -121,3 +122,39 @@ footer {
   object-fit: cover; /* Ensures the image is cropped nicely if necessary */
   border-radius: 10px; /* Add rounded corners if you want */
 }
+
+
+/* Sectiunea afisare Review START */
+
+.titlu-rec {
+  font-size: 1.8rem;
+}
+
+.carousel-inner {
+  display: flex;
+  justify-content: center;  /* Alinează cardurile la centru */
+}
+
+.carousel-item {
+  max-width: 600px; /* Limitează lățimea maximă a cardului de recenzie */
+  margin: 0 auto;
+  transition: opacity 1.5s ease-in-out; 
+}
+
+.card {
+  background-color: rgba(237, 229, 229, 0.807); /* Culoare de fundal pentru a evidenția recenziile */
+  border-radius: 10px; /* Colțuri rotunjite pentru card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow pentru un efect de profunzime */
+  padding: 10px; /* Spațiu interior pentru card */
+}
+
+.review p {
+  font-size: 1.1rem; /* Dimensiune mai mare a textului pentru lizibilitate */
+  line-height: 1.5; /* Înălțime de linie pentru un aspect mai aerisit */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: goldenrod;
+}
+
+/* Sectiunea afisare Review END */
