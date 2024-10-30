@@ -8,6 +8,7 @@
   --border-color: #eaeaea; /* Light grey for borders */
   --highlight-color: #ffcc00; /* Star rating highlight */
   --dark-accent-color: #333; /* Darker accent color */
+  --nav-bar-color: rgba(237, 229, 229, 0.807);
 }
 
 html {
@@ -45,7 +46,7 @@ footer {
 /* Navbar START */
 
 .navbar {
-  background-color: rgba(237, 229, 229, 0.807);
+  background-color: var(--nav-bar-color);
   height: 100px;
   margin: 20px auto;
   border-radius: 16px;

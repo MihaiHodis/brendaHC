@@ -1,3 +1,17 @@
+/* Color Legend */
+:root {
+    --primary-color: #d4a017; /* Golden - Main brand color */
+    --text-color: #d49e17df;
+    --secondary-color: #f8f9fa; /* Light background */
+    --accent-color: #555; /* Accent for hover effects */
+    --background-color: #ffffff; /* Default page background */
+    --border-color: #eaeaea; /* Light grey for borders */
+    --highlight-color: #ffcc00; /* Star rating highlight */
+    --dark-accent-color: #333; /* Darker accent color */
+    --nav-bar-color: rgba(237, 229, 229, 0.807);
+  }
+
+
 html {
     scroll-padding-top: 50px; /* Înălțimea navbar-ului */
 }
@@ -6,16 +20,13 @@ body {
     font-family: "Nerko One", cursive;
 }
 
-header {
-    background-color: #f8f9fa;
-}
 
 h1, h2 {
-    color: gold;
+    color: var(--primary-color);
 }
 
 footer {
-    background-color: #d3ad05; /* Fundal întunecat pentru footer */
+    background-color: var(--primary-color); /* Fundal întunecat pentru footer */
     color: white;
 }
 
@@ -23,7 +34,7 @@ footer {
          /* Navbar START */
 
 .navbar {
-    background-color:rgba(237, 229, 229, 0.807);
+    background-color:var(--nav-bar-color);
     height: 100px;
     margin: 20px auto;
     border-radius: 16px;
@@ -100,8 +111,6 @@ footer {
     }
 }
 
-
-
         /* Navbar END */
 
 
@@ -136,7 +145,7 @@ footer {
 
 /* Stil pentru titlul cardurilor */
 .card-title a {
-    color: gold;
+    color: var(--primary-color);
     font-family: 'Nerko One', cursive;
     font-size: 1.5rem;
     text-decoration: none;
