@@ -12,6 +12,9 @@ def create_app():
     app.config['MYSQL_PASSWORD'] = '1234'
     app.config['MYSQL_DB'] = 'brendaDB'
 
+    # Setarea cheii secrete pentru a utiliza flsh
+    app.config['SECRET_KEY'] = '1234'
+
     # Funcție pentru conectarea la baza de date
     def get_db_connection():
         try:

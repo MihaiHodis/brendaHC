@@ -1,4 +1,4 @@
-from flask import render_template, jsonify, current_app as app, request, redirect
+from flask import render_template, jsonify, current_app as app, request, redirect, flash
 
 @app.route('/')
 def home():
@@ -125,4 +125,34 @@ def adauga_recenzie():
     connection.close()
 
     # Redirecționăm înapoi la pagina principală
+    return redirect(f'/produse/{produs_id}')
+
+
+# Ruta backend pentru procesarea cererii de comanda
+@app.route('/contact', methods=['POST'])
+def contacteaza_admin():
+    produs_id = request.form['produs_id']
+    nume_utilizator = request.form['nume_utilizator']
+    email = request.form['email']
+    detalii = request.form['detalii']
+
+    # Conexiunea cu baza de date pentru a salva cererea
+    connection = app.get_db_connection()
+    cursor = connection.cursor()
+
+    try:
+        cursor.execute("""
+            INSERT INTO cereri_contact (produs_id, nume_utilizator, email, detalii)
+            VALUES (%s, %s, %s, %s)
+        """, (produs_id, nume_utilizator, email, detalii))
+        connection.commit()
+    except Exception as e:
+        print(f"Eroare la salvarea cererii: {e}")
+        connection.rollback()
+    finally:
+        cursor.close()
+        connection.close()
+    
+    # Redirectionam utilizatorul inapoi cu un mesaj de confirmare
+    flash('Cererea ta a fost trimisa cu succes!')
     return redirect(f'/produse/{produs_id}')
