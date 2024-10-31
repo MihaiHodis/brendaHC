@@ -1,10 +1,24 @@
 from flask import Flask
+from flask_mail import Mail
+
 import pymysql
 
 pymysql.install_as_MySQLdb()
 
 def create_app():
     app = Flask(__name__)
+
+
+    # Configurarea aplicației pentru Flask-Mail
+    app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Serverul SMTP
+    app.config['MAIL_PORT'] = 587                # Portul pentru TLS
+    app.config['MAIL_USE_TLS'] = True            # Utilizarea TLS
+    app.config['MAIL_USE_SSL'] = False
+    app.config['MAIL_USERNAME'] = 'mihaihodis98@gmail.com'  # Adresa ta de Gmail
+    app.config['MAIL_PASSWORD'] = 'vvhqmluvctgyvmig'  # Parola pentru Gmail (poate fi o parolă pentru aplicație)
+
+    # Inițializarea Flask-Mail
+    mail = Mail(app)
 
     # Configurarea bazei de date
     app.config['MYSQL_HOST'] = 'localhost'
@@ -31,6 +45,7 @@ def create_app():
 
     # Expunem funcția `get_db_connection` pentru a fi folosită în alte module
     app.get_db_connection = get_db_connection
+    app.mail = mail # Expunem si mail pentru a fi folosit in routes
 
     # Importăm rutele după ce am creat aplicația pentru a evita circular import
     with app.app_context():
