@@ -1,4 +1,5 @@
 from flask import render_template, jsonify, current_app as app, request, redirect, flash
+from .functii_utile import trimite_notificare_email
 
 @app.route('/')
 def home():
@@ -146,13 +147,18 @@ def contacteaza_admin():
             VALUES (%s, %s, %s, %s)
         """, (produs_id, nume_utilizator, email, detalii))
         connection.commit()
+
+        # Trimiterea notificării prin email
+        trimite_notificare_email(nume_utilizator, email, produs_id, detalii)
+        flash('Cererea ta a fost trimisă cu succes! Vei fi contactat în curând.')
+
     except Exception as e:
         print(f"Eroare la salvarea cererii: {e}")
         connection.rollback()
+        flash('A apărut o eroare la trimiterea cererii.')
+
     finally:
         cursor.close()
         connection.close()
     
-    # Redirectionam utilizatorul inapoi cu un mesaj de confirmare
-    flash('Cererea ta a fost trimisa cu succes!')
     return redirect(f'/produse/{produs_id}')
