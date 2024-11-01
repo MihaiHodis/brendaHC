@@ -145,6 +145,11 @@ footer {
   border-radius: 10px; /* Add rounded corners if you want */
 }
 
+#link-comanda {
+  text-decoration: none;
+  display: inline-block;
+}
+
 
 /* Sectiunea afisare Review START */
 
@@ -261,3 +266,16 @@ footer {
 }
 
     /* Sectiunea de adaugat review END */
+
+
+    /* Sectiunea de formular contact START */
+
+.add-contact-container {
+  background-color: rgba(255, 255, 255, 0.9);  /* Light semi-transparent background for contrast */
+  border-radius: 15px;  /* Rounded corners for the container */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  padding: 30px;  /* Padding for inner spacing */
+  margin: 20px auto;  /* Center horizontally with margin */
+}
+
+    /* Sectiunea de formular contact END */

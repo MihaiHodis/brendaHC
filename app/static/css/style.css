@@ -183,6 +183,7 @@ a:hover {
   box-shadow: none !important;
   border: none !important;
   color: black !important; /* Culoare pe hover */
+  background-color: var(--highlight-color);
 }
 
 /* Dacă există alte butoane cu un stil similar, aplică-le și acestora */
