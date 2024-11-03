@@ -162,3 +162,35 @@ def contacteaza_admin():
         connection.close()
     
     return redirect(f'/produse/{produs_id}')
+
+
+# Ruta backend pentru abonarea la Newsletter
+@app.route('/newsletter', methods=['POST'])
+def newsletter_signup():
+    email = request.form['email']
+
+    connection = app.get_db_connection()
+    cursor = connection.cursor()
+
+    try:
+        # Verificam daca email-ul exista deja in baza de date
+        cursor.execute('SELECT email FROM newsletter WHERE email = %s', (email,))
+        result = cursor.fetchone()
+
+        if result:
+            flash('Ești deja abonat la newslatter!', 'info')
+        else:
+            # Introducem email-ul in baza de date
+            cursor.execute('INSERT INTO newsletter (email) VALUES (%s)', (email,))
+            connection.commit()
+            flash('Te-ai abonat la newslatter-ul Brenda Home Cooking! Vei primi curand noutati de la noi!', 'success')
+    except Exception as e:
+        print(f"Database error: {e}")
+        flash('A apărut o eroare. Te rugăm să încerci din nou.', 'danger')
+        connection.rollback()
+    finally:
+        cursor.close()
+        connection.close()
+    
+    # Redirectionăm utilizatorul înapoi la pagina principală
+    return redirect('/')
