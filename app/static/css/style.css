@@ -1,19 +1,27 @@
 /* Color Legend */
 :root {
-  --primary-color: #d4a017; /* Golden - Main brand color */
+  --primary-color: #d4a017;
+  /* Golden - Main brand color */
   --text-color: #d49e17df;
-  --secondary-color: #f8f9fa; /* Light background */
-  --accent-color: #555; /* Accent for hover effects */
-  --background-color: #ffffff; /* Default page background */
-  --border-color: #eaeaea; /* Light grey for borders */
-  --highlight-color: #ffcc00; /* Star rating highlight */
-  --dark-accent-color: #333; /* Darker accent color */
+  --secondary-color: #f8f9fa;
+  /* Light background */
+  --accent-color: #555;
+  /* Accent for hover effects */
+  --background-color: #ffffff;
+  /* Default page background */
+  --border-color: #eaeaea;
+  /* Light grey for borders */
+  --highlight-color: #ffcc00;
+  /* Star rating highlight */
+  --dark-accent-color: #333;
+  /* Darker accent color */
   --nav-bar-color: rgba(237, 229, 229, 0.807);
 }
 
 
 html {
-  scroll-padding-top: 50px; /* Înălțimea navbar-ului */
+  scroll-padding-top: 50px;
+  /* Înălțimea navbar-ului */
 }
 
 body {
@@ -28,7 +36,8 @@ h2 {
 }
 
 footer {
-  background-color: var(--primary-color); /* Fundal întunecat pentru footer */
+  background-color: var(--primary-color);
+  /* Fundal întunecat pentru footer */
   color: white;
 }
 
@@ -97,11 +106,12 @@ footer {
 
 /* Navbar END */
 
-  /* Stilizare sectiune about */
+/* Stilizare sectiune about */
 
 #about img {
   max-width: 100%;
-  height: auto; /* Păstrează proporțiile corecte ale imaginii */
+  height: auto;
+  /* Păstrează proporțiile corecte ale imaginii */
 }
 
 #about h2 {
@@ -182,7 +192,8 @@ a:hover {
   outline: none !important;
   box-shadow: none !important;
   border: none !important;
-  color: black !important; /* Culoare pe hover */
+  color: black !important;
+  /* Culoare pe hover */
   background-color: var(--highlight-color);
 }
 
@@ -193,19 +204,104 @@ a.btn {
   box-shadow: none !important;
 }
 
-    /* Stilizare formular contact */
+/* Stilizare Newsletter */
 
-#contact input,
-#contact textarea {
-  font-size: 1.4rem;
-  padding: 10px;
+#newsletter {
+  padding: 50px 0;
 }
 
-#contact button {
-  font-size: 1.4rem;
-  padding: 10px 20px;
+#newsletter h2 {
+  font-family: 'Nerko One', cursive;
+  color: var(--primary-color);
   margin-bottom: 20px;
-  background-color: transparent;
-  color: black;
+  font-size: 2.7rem;
+  text-align: center;
+}
+
+#newsletter p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+#newsletter input {
+  font-size: 1.2rem;
+}
+
+.newsletter-form .form-control {
+  border-radius: 0;
+}
+
+.newsletter-form .btn-primary {
+  background-color: goldenrod;
+  border-color: goldenrod;
+  font-size: 1.2rem;
+}
+
+.newsletter-form .btn-primary:hover {
+  background-color: #d3ad05;
+  border-color: #d3ad05;
+}
+
+/* Pentru mesajele flash  START */
+
+/* Stil pentru Mesajele Flash */
+.flash-messages {
+  max-width: 500px; /* Limitează lățimea pentru a nu ocupa toată pagina */
+  margin: 20px auto; /* Centrează mesajele în pagină */
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Nerko One', cursive;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative; /* Pentru a putea folosi un buton de close */
+}
+
+/* Folosim culorile definite în root pentru consistență */
+
+/* Mesajele de succes */
+.flash-messages.success {
+  background-color: var(--primary-color); /* Fundal cu culoarea brandului principal */
+  color: var(--background-color); /* Text alb pentru contrast */
+  border-left: 6px solid var(--highlight-color);
+}
+
+/* Mesajele informaționale */
+.flash-messages.info {
+  background-color: var(--secondary-color); /* Fundal deschis */
+  color: var(--accent-color); /* Accent de culoare pentru informații */
+  border-left: 6px solid var(--primary-color);
+}
+
+/* Mesajele de eroare */
+.flash-messages.error {
+  background-color: rgba(255, 87, 87, 0.9); /* Roșu pentru eroare */
+  color: var(--background-color); /* Text alb pentru contrast */
+  border-left: 6px solid rgba(255, 0, 0, 0.8); /* Border roșu pentru eroare */
+}
+
+/* Mesajele de avertizare */
+.flash-messages.warning {
+  background-color: rgba(255, 248, 229, 0.9); /* Galben deschis pentru avertizare */
+  color: var(--dark-accent-color);
+  border-left: 6px solid var(--highlight-color); /* Border galben pentru consistență */
+}
+
+/* Buton de close pentru mesajele flash */
+.flash-messages button {
+  background: none;
   border: none;
+  font-size: 1.2rem;
+  color: var(--dark-accent-color);
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  outline: none;
+}
+
+/* Efect la hover pentru mesajele flash */
+.flash-messages:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }

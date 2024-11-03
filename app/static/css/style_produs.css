@@ -234,8 +234,7 @@ footer {
 
 .review-form label {
   color: #333;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .review-form .form-control {
@@ -276,6 +275,15 @@ footer {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
   padding: 30px;  /* Padding for inner spacing */
   margin: 20px auto;  /* Center horizontally with margin */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  color: #333;
+  font-size: 1.2rem;
 }
 
     /* Sectiunea de formular contact END */
