@@ -17,11 +17,6 @@ html {
 
 body {
   font-family: "Nerko One", cursive;
-  background-image: url(/static/images/page-background.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
 }
 
 h1,
